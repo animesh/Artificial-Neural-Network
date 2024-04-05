@@ -1,17 +1,12 @@
 #%%data
-inp=[0.05,0.10]
-inpw=[[0.15,0.20],[0.25,0.3]]
-hidw=[[0.4,0.45],[0.5,0.55]]
-outputr=[0.01,0.99]
-bias=[0.35,0.6]
-lr=0.5
-#%%numpy
 #!pip install numpy
 import numpy as np
-x=np.asarray(inp)
-y=np.asarray(outputr)
-w1=np.asarray(inpw)
-w2=np.asarray(hidw)
+x=np.asarray([0.05,0.10])
+y=np.asarray([0.01,0.99])
+w1=np.asarray([[0.15,0.20],[0.25,0.3]])
+w2=np.asarray([[0.4,0.45],[0.5,0.55]])
+bias=[0.35,0.6]
+lr=0.5
 print("input",x,"\noutput",y,"\nbias",bias,"\nweights",w1,w2)
 #%%forward-pass
 h=1/(1+np.exp(-(x.dot(w1.T)+bias[0])))
